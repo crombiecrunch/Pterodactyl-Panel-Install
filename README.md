@@ -8,7 +8,7 @@ curl -Lo install.sh https://raw.githubusercontent.com/crombiecrunch/Pterodactyl-
 bash install.sh -i [nginx] [apache] <br>
   i.e. bash insall.sh -i nginx<br>
   
-  You will be prmoted for email, FDQN, time zone, and portal password. 
+  You will be prompted for email, FDQN, time zone, and portal password. 
   
  This will install all of the necesary files and update the system including SSL.
  
