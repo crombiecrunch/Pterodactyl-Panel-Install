@@ -4,9 +4,9 @@ This script will install Pterodactyl-Panel for minecraft on your Ubuntu 16.x sys
 
 This script should be ran on a properly setup server not under root. 
 
-curl -Lo install.sh https://raw.githubusercontent.com/crombiecrunch/Pterodactyl-Panel-Install/master/install.sh
-bash install.sh -i [nginx] [apache]
-  i.e. bash insall.sh -i nginx
+curl -Lo install.sh https://raw.githubusercontent.com/crombiecrunch/Pterodactyl-Panel-Install/master/install.sh <br>
+bash install.sh -i [nginx] [apache] <br>
+  i.e. bash insall.sh -i nginx<br>
   
   You will be prmoted for email, FDQN, time zone, and portal password. 
   
