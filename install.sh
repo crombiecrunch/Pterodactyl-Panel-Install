@@ -9,7 +9,7 @@
 #
 ################################################################################
 
-# get user input
+
 clear
 # get sever os name: ubuntu or centos
 server_name=`lsb_release -ds | awk -F ' ' '{printf $1}' | tr A-Z a-z`
@@ -31,7 +31,7 @@ displayErr() {
     echo
     exit 1;
 }
-
+    # get user input
 server_setup() {
     clear
     output "Hope you enjoy this install script created by http://www.my4x4.club. Please enter the information below. "
@@ -266,7 +266,7 @@ echo '
             ssl_prefer_server_ciphers on;
             ssl_session_cache shared:SSL:10m;
             ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:ECDHE-RSA-AES128-GCM-SHA256:AES256+EECDH:DHE-RSA-AES128-GCM-SHA256:AES256+EDH:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA256:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA:ECDHE-RSA-DES-CBC3-SHA:EDH-RSA-DES-CBC3-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:DES-CBC3-SHA:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!MD5:!PSK:!RC4";
-            # ssl_dhparam /etc/ssl/certs/dhparam.pem;
+            ssl_dhparam /etc/ssl/certs/dhparam.pem;
         
             # Add headers to serve security related headers
             add_header Strict-Transport-Security "max-age=15768000; preload;";
