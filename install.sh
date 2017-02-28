@@ -404,14 +404,14 @@ EOF
       sudo chown -R www-data:www-data /srv/daemon
       sudo chmod -R 775 /var/www/pterodactyl/html
       sudo chmod -R 775 /srv/daemon
-sudo bash -c 'cat > ~/.my.cnf' <<-'EOF'
+      echo '
 [client]
 user=root
-password="$rootpasswd"
+password='"${rootpasswd}"'
 [mysql]
 user=root
-password="$rootpasswd"
-EOF
+password='"${rootpasswd}"'
+' | sudo -E tee ~/.my.cnf >/dev/null 2>&1
       sudo chmod 0600 ~/.my.cnf
       output "Setting mysql root password"
       sudo mysqladmin -u root password $rootpasswd    
