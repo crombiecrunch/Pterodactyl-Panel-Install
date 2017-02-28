@@ -229,6 +229,7 @@ echo '
 
     sudo ln -s /etc/nginx/sites-available/pterodactyl.conf /etc/nginx/sites-enabled/pterodactyl.conf
     output "Install LetsEncrypt and setting SSL"
+    sudo service nginx restart
     sudo aptitude -y install letsencrypt
     sudo letsencrypt certonly -a webroot --webroot-path=/var/www/pterodactyl/html/public --email "$EMAIL" --agree-tos -d "$SERVNAME"
     sudo rm /etc/nginx/sites-available/pterodactyl.conf
