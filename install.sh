@@ -245,7 +245,7 @@ echo '
         server {
             listen 443 ssl http2;
             listen [::]:443 ssl http2;
-            server_name $SERVNAME;
+            server_name '"${SERVNAME}"';
         
             root /var/www/pterodactyl/html/public;
             index index.php;
