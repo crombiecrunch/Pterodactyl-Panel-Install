@@ -6,7 +6,7 @@ This script should be ran on a properly setup server not under root.
 
 curl -Lo install.sh https://raw.githubusercontent.com/crombiecrunch/Pterodactyl-Panel-Install/master/install.sh <br>
 bash install.sh -i [nginx] [apache] <br>
-  i.e. bash insall.sh -i nginx<br>
+  i.e. bash install.sh -i nginx<br>
   
   You will be prompted for email, FDQN, time zone, and portal password. 
   
